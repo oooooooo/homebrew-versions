@@ -84,7 +84,7 @@ class Postgresql92 < Formula
     unless (archs_for_command(framework_python)).include? :x86_64
       opoo "Detected a framework Python that does not have 64-bit support in:"
       puts <<-EOS.undent
-          #{framework_python}
+        #{framework_python}
 
         The configure script seems to prefer this version of Python over any others,
         so you may experience linker problems as described in:
@@ -98,9 +98,9 @@ class Postgresql92 < Formula
 
   def caveats
     s = <<-EOS.undent
-        initdb #{var}/postgres -E utf8    # create a database
-        postgres -D #{var}/postgres       # serve that database
-        PGDATA=#{var}/postgres postgres   # …alternatively
+    initdb #{var}/postgres -E utf8    # create a database
+    postgres -D #{var}/postgres       # serve that database
+    PGDATA=#{var}/postgres postgres   # …alternatively
 
     If builds of PostgreSQL 9 are failing and you have version 8.x installed,
     you may need to remove the previous version first. See:
