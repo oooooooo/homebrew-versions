@@ -102,15 +102,15 @@ class Postgresql92 < Formula
         postgres -D #{var}/postgres       # serve that database
         PGDATA=#{var}/postgres postgres   # …alternatively
 
-    If builds of PostgreSQL 9 are failing and you have version 8.x installed,
-    you may need to remove the previous version first. See:
-      https://github.com/mxcl/homebrew/issues/issue/2510
+        If builds of PostgreSQL 9 are failing and you have version 8.x installed,
+        you may need to remove the previous version first. See:
+          https://github.com/mxcl/homebrew/issues/issue/2510
 
-    To migrate existing data from a previous major version (pre-9.2) of PostgreSQL, see:
-      http://www.postgresql.org/docs/9.2/static/upgrading.html
+        To migrate existing data from a previous major version (pre-9.2) of PostgreSQL, see:
+          http://www.postgresql.org/docs/9.2/static/upgrading.html
 
-    Some machines may require provisioning of shared memory:
-      http://www.postgresql.org/docs/9.2/static/kernel-resources.html#SYSVIPC
+        Some machines may require provisioning of shared memory:
+          http://www.postgresql.org/docs/9.2/static/kernel-resources.html#SYSVIPC
     EOS
 
     s << "\n" << gem_caveats if MacOS.prefer_64_bit?
@@ -167,7 +167,7 @@ __END__
 -override python_libspec = -framework Python
 -override python_additional_libs =
  endif
- 
+
  # If we don't have a shared library and the platform doesn't allow it
 --- a/contrib/uuid-ossp/uuid-ossp.c	2012-07-30 18:34:53.000000000 -0700
 +++ b/contrib/uuid-ossp/uuid-ossp.c	2012-07-30 18:35:03.000000000 -0700
